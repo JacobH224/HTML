@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Credit Card Page</title>
+    </head>
+<body>
+    <form id="UserSubmission1">
+        <label for="firstname"><h4>First name:</h4></label>
+        <input type="text" id="firstname">
+        <label for="surname"><h4>Surname:</h4></label>
+        <input type="text" id="surname">
+        <label for="age"><h4>Email Address:</h4></label>
+        <input type="text" id="age">
+        <label for="dob"><h4>Date of Birth:</h4></label>
+        <input type="date" id="dob" name="dob"><br><br>
+    </form>
+        <fieldset>
+            <legend>Credit Card Type</legend>
+            <h5><label for="radio"><h2>Visa</h2><img scr="Visa.png" alt="visa"></label></h5>
+            <h5><input type="radio" name=radiooo id="radioo"></h5>
+            <h5><label for="radio"><h2>Visa Debit</h2><img scr="Visa.png" alt="visa debit"></label></h5>
+            <h5><input type="radio" name=radiooo id="radioo"></h5>
+            <h5><label for="radio"><h2>Mastercard</h2><img scr="mastercard.png" alt="mastercard"></label></h5>
+            <h5><input type="radio" name=radiooo id="radioo"></h5>
+            <h5><label for="radio"><h2>American Express</h2><img scr="americanExpress.png" alt="americanexpress"></label></h5>
+            <h5><input type="radio" name=radiooo id="radioo"></h5>
+            <h5><label for="cardNumber"><h2>Credit Card Number:</h2></label></h5>
+            <h5><input type="text" id="cardNumber"></h5>
+            <label for="expiryYear">Expiry Year</label>
+            <select id="userChoice">Select Year
+                <option>Select Year</option>
+                <option>2029</option>
+                <option>2028</option>
+                <option>2027</option>
+                <option>2026</option>
+                <option>2025</option>
+            </select><br><br>
+            <label for="expiryMonth">Expiry Month</label>
+            <select id="userChoice2">Select Month
+                <option>Select Month</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+        </fieldset>
+        <h4>Additional Notes:</h4>
+            <textarea>
+Enter additional notes here:
+                </textarea><br><br>
+        <input type="submit">
+    </form>
+        <script>
+
+            let formID = document.getElementById("UserSubmission1")
+            formID.addEventListener('submit', userData)
+            function userData(event){
+            event.preventDefault()
+            let userName = document.getElementById("firstname")
+            console.log(userName.value)
+            let userName1 = document.getElementById("radio")
+            document.querySelector('input[name=”radiooo”]:checked')
+
+            }
+
+        </script>
+
+           
+</body>
+</html>
