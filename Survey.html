@@ -16,7 +16,30 @@
         <input type="radio" id="option2" name="choice" value = "no" >
         <label for="option2">No</label>
 
-        <label for="newsletter"><h4>Subscribe to our newsletter:</h4></label>
+        <label for="newsletter" value = "Yes"><h4>Subscribe to our newsletter:</h4></label>
         <input type="checkbox" id="favcountry">
+        <h6><input type="submit"></h6>
     </form>
+    <script>
+        let formID = document.getElementById("UserSubmission1")
+        formID.addEventListener('submit', userData)
+        function userData(event){
+        event.preventDefault()
+        let name = document.getElementById("name")
+        console.log(name.value)
+        let age = document.getElementById("age")
+        console.log(age.value)
+        let country = document.getElementById("country")
+        console.log(country.value)
+        let fav_country = document.getElementById("favcountry")
+        console.log(fav_country.value)
+        let option1 = document.getElementById("option1")
+        console.log(option1.value)
+        let option2 = document.getElementById("option2")
+        console.log(option2.value)
+        let newsletter = document.getElementById("newsletter")
+        console.log(newsletter.value)
+            }
+        </script>
+     
 </html>
